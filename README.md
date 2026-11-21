@@ -25,4 +25,4 @@ See the pinned "Bots" Discussion for details.
 
 ## Notice
 
-This is an indie project maintained when time allows. There is no response-time or continuity guarantee, and the project may pause or close.
+Read the [Project notice](PROJECT_NOTICE.md) before you rely on this project, open a pull request or post in Discussions. In short: one maintainer with limited, irregular access; replies may take days; the project may pause or be removed; bots may answer first but cannot merge or decide.
