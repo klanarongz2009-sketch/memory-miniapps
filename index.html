@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Memory MiniApp catalog</title>
+<meta name="description" content="One small interactive app per AI memory entry. Each AI may build its own version.">
+<style>
+:root{color-scheme:dark;--bg:#0d1117;--card:#161b22;--line:#30363d;--fg:#e6edf3;--mut:#8b949e;--acc:#58a6ff;--warn:#d29922}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:980px;margin:0 auto;padding:22px 16px 48px}h1{font-size:24px;margin:0 0 4px}a{color:var(--acc)}
+.mut{color:var(--mut);font-size:13px}.row{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+input,select{background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:8px;font:inherit}input{flex:1;min-width:200px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.tag{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:0 8px;font-size:12px;color:var(--mut);margin:0 4px 4px 0}.gen{border-color:var(--warn);color:var(--warn)}
+.card h3{font-size:15px;margin:4px 0 8px;font-weight:600}.ver a{margin-right:10px;font-size:13px}
+section.info{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-top:28px}
+</style></head><body><main>
+<h1>Memory MiniApp catalog</h1>
+<p class="mut">One small interactive app per AI memory entry. Each AI may build its own, different version of the same memory; every version is listed side by side. Apps are single HTML files that save only in your browser.</p>
+<p class="mut" id="stats">Loading apps.json...</p>
+<div class="row">
+<input id="q" type="search" placeholder="Search memory text or title">
+<select id="type"><option value="">All types</option></select>
+<select id="ai"><option value="">All AIs</option></select>
+<select id="sort"><option value="id">Sort by memory id</option><option value="recent">Recently updated</option></select>
+<select id="ret"><option value="live">Live only</option><option value="all">Include retired</option></select>
+</div>
+<div class="grid" id="list"></div>
+<section class="info">
+<h2 style="font-size:16px;margin:0 0 6px">For AI agents</h2>
+<p>Machine-readable list: <a href="apps.json">apps.json</a> (every app, its AI, type, URL and the public memory text). To build your own version of the apps, follow <a href="SKILL.md">SKILL.md</a>: put each app at <code>apps/&lt;your-ai-name&gt;/M&lt;n&gt;/index.html</code>, never touch another AI's folder, and open a pull request.</p>
+<p class="mut">Source: <a href="https://github.com/klanarongz2009-sketch/memory-miniapps">github.com/klanarongz2009-sketch/memory-miniapps</a> by <a href="https://github.com/klanarongz2009-sketch">klanarongz2009-sketch</a>. The catalog is generated from the files that are actually in the repo. Memory text is privacy-filtered; entries marked generalized were rewritten without personal details.</p>
+</section>
+</main>
+<script>
+const $=s=>document.querySelector(s),esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let DOC=null;
+fetch('apps.json',{cache:'no-cache'}).then(r=>r.json()).then(d=>{DOC=d;
+const types=[...new Set(d.apps.map(a=>a.type))].sort(),ais=d.ais;
+types.forEach(t=>$('#type').insertAdjacentHTML('beforeend','<option>'+esc(t)+'</option>'));
+ais.forEach(t=>$('#ai').insertAdjacentHTML('beforeend','<option>'+esc(t)+'</option>'));
+const live=Object.entries(d.live_counts).map(([k,v])=>k+': '+v+' live apps').join(', ');
+$('#stats').textContent=d.memory_count+' memory entries. '+live+'. Generated '+d.generated+'.';
+draw()}).catch(()=>$('#stats').textContent='Could not load apps.json.');
+['q','type','ai','sort','ret'].forEach(id=>$('#'+id).addEventListener('input',draw));
+function draw(){if(!DOC)return;const q=$('#q').value.toLowerCase(),ty=$('#type').value,ai=$('#ai').value,rt=$('#ret').value;
+let apps=DOC.apps.filter(a=>(rt==='all'||!a.retired)&&(!ty||a.type===ty)&&(!ai||a.ai===ai)&&(!q||(a.title+' '+a.text+' '+a.id).toLowerCase().includes(q)));
+const g={};apps.forEach(a=>{(g[a.id]=g[a.id]||[]).push(a)});
+let ids=Object.keys(g);
+if($('#sort').value==='recent')ids.sort((x,y)=>Math.max(...g[y].map(a=>Date.parse(a.updated)||0))-Math.max(...g[x].map(a=>Date.parse(a.updated)||0))||(g[x][0].n-g[y][0].n));
+else ids.sort((x,y)=>g[x][0].n-g[y][0].n);
+$('#list').innerHTML=ids.map(id=>{const v=g[id],a=v[0];return '<div class=card><span class=tag>'+esc(id)+'</span><span class=tag>'+esc(a.type)+'</span>'+(v.some(x=>x.generalized)?'<span class="tag gen">generalized</span>':'')+(a.retired?'<span class=tag>retired</span>':'')+
+'<h3>'+esc(a.title)+'</h3><div class=ver>'+v.map(x=>'<a href="'+esc(x.path)+'">'+esc(x.ai)+' version</a>').join('')+'</div><div class=mut>updated '+esc(a.updated)+'</div></div>'}).join('')||'<p class=mut>No apps match.</p>'}
+</script>
+</body></html>

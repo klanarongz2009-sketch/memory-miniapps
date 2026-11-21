@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>M172 - Preferences are a short index</title>
+<meta name="miniapp:id" content="M172">
+<meta name="miniapp:ai" content="sesame">
+<meta name="miniapp:type" content="RULE">
+<meta name="miniapp:title" content="Preferences are a short index">
+<meta name="miniapp:generalized" content="false">
+<meta name="miniapp:created" content="2026-11-21">
+<meta name="miniapp:updated" content="2026-11-21">
+<meta name="miniapp:retired" content="false">
+<style>:root{color-scheme:dark;--bg:#0d1117;--card:#161b22;--line:#30363d;--fg:#e6edf3;--mut:#8b949e;--acc:#58a6ff;--ok:#3fb950;--warn:#d29922;--bad:#f85149}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:20px 16px 40px}h1{font-size:20px;margin:6px 0 4px}h2{font-size:15px;margin:0 0 10px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:1px 9px;font-size:12px;color:var(--mut);margin-right:6px}
+.gen{border-color:var(--warn);color:var(--warn)}a{color:var(--acc)}label{display:flex;gap:10px;align-items:flex-start;padding:6px 0;border-bottom:1px solid var(--line)}label:last-child{border-bottom:0}
+input[type=checkbox]{margin-top:4px;accent-color:var(--acc)}textarea,input[type=text],select{width:100%;background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:8px;font:inherit}textarea{min-height:110px}
+button{background:#21262d;color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:7px 12px;font:inherit;cursor:pointer;margin:6px 6px 0 0}button:hover{border-color:var(--acc)}
+.bar{height:8px;background:var(--bg);border:1px solid var(--line);border-radius:99px;overflow:hidden;margin-top:8px}.bar i{display:block;height:100%;background:var(--ok);width:0}
+.mut{color:var(--mut);font-size:13px}.out{white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px;margin-top:8px}.hit{color:var(--bad)}.okc{color:var(--ok)}
+footer{color:var(--mut);font-size:12px;margin-top:24px;border-top:1px solid var(--line);padding-top:10px}</style></head><body><main>
+<p><a href="../../../">Catalog</a></p>
+<span class="tag">M172</span><span class="tag">RULE</span><span class="tag">Rule checker</span>
+<h1>Preferences are a short index</h1>
+<p class="mut">Check a draft or an action against this rule before you send it.</p>
+<section class="card"><h2>Memory</h2><p>Preferences are a short index; full rules live in agent-memory.md; never compress without a full copy and a pointer.</p><button id="cpy">Copy text</button><span id="note" class="mut"></span></section>
+<section class="card"><h2>Checklist</h2><div id="checks"></div><div class="bar"><i id="bar"></i></div><p class="mut"><span id="pc"></span> confirmed. Saved in this browser only.</p><button id="cpl">Copy checklist</button><button id="reset">Reset</button></section>
+<section class="card"><h2>Rule checker</h2><div id="widget"></div></section>
+<footer>M172 | built by sesame | 2026-11-21</footer>
+</main>
+<script type="application/json" id="memory">{"id": "M172", "ai": "sesame", "type": "RULE", "text": "Preferences are a short index; full rules live in agent-memory.md; never compress without a full copy and a pointer.", "clauses": ["Preferences are a short index; full rules live in agent-memory.md; never compress without a full copy and a pointer"], "terms": [], "keyword": "Preferences"}</script>
+<script>const D=JSON.parse(document.getElementById('memory').textContent);const K='mm-'+D.ai+'-'+D.id;
+const S=JSON.parse(localStorage.getItem(K)||'{}');const save=()=>localStorage.setItem(K,JSON.stringify(S));
+const $=s=>document.querySelector(s);const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+function copy(t){navigator.clipboard&&navigator.clipboard.writeText(t);const n=$('#note');n.textContent='Copied.';setTimeout(()=>n.textContent='',1500)}
+// checklist
+const cl=$('#checks');S.c=S.c||[];D.clauses.forEach((c,i)=>{const l=document.createElement('label');l.innerHTML='<input type=checkbox '+(S.c[i]?'checked':'')+'><span>'+esc(c)+'</span>';l.querySelector('input').onchange=e=>{S.c[i]=e.target.checked;save();prog()};cl.appendChild(l)});
+function prog(){const d=S.c.filter(Boolean).length;$('#bar').style.width=(100*d/D.clauses.length)+'%';$('#pc').textContent=d+' / '+D.clauses.length}prog();
+$('#reset').onclick=()=>{localStorage.removeItem(K);location.reload()};
+$('#cpy').onclick=()=>copy(D.text);
+$('#cpl').onclick=()=>copy(D.clauses.map((c,i)=>'- ['+(S.c[i]?'x':' ')+'] '+c).join('\n'));
+const T=D.type,w=$('#widget');
+if(T==='RULE'){const terms=D.terms;w.innerHTML='<textarea id=dr placeholder="Paste a draft reply, prompt or plan here"></textarea><button id=ck>Check draft</button><div id=res class=out>No check yet.</div>';
+$('#ck').onclick=()=>{const t=$('#dr').value;if(!t.trim()){$('#res').textContent='Paste some text first.';return}const low=t.toLowerCase();const hits=terms.filter(x=>low.includes(x.toLowerCase()));const left=D.clauses.filter((c,i)=>!S.c[i]);
+$('#res').innerHTML=(terms.length?(hits.length?'<span class=hit>Quoted terms found in the draft: '+hits.map(esc).join(', ')+'. Check whether the rule forbids or requires them.</span>':'<span class=okc>None of the quoted terms ('+terms.map(esc).join(', ')+') appear in the draft.</span>'):'This rule has no quoted terms to scan for.')+'\n\n'+(left.length?'Not yet confirmed in the checklist:\n- '+left.map(esc).join('\n- '):'<span class=okc>Every clause is confirmed in the checklist.</span>')}}
+else if(T==='PREF'){w.innerHTML='<select id=md><option value=on>Apply this preference</option><option value=off>Ignore it for this session</option></select><button id=gen>Make instruction</button><div id=res class=out></div>';
+$('#gen').onclick=()=>{const on=$('#md').value==='on';const t=(on?'Follow this user preference: ':'For this session only, do not apply this preference: ')+D.text;$('#res').textContent=t;copy(t)}}
+else if(T==='FACT'){const kw=D.keyword;const shown=kw?D.text.split(kw).join('_____'):D.text.slice(0,Math.ceil(D.text.length/2))+' ...';S.f=S.f||{k:0,n:0};
+w.innerHTML='<div class=out id=q>'+esc(shown)+'</div><input type=text id=g placeholder="'+(kw?'Fill in the blank':'Say the rest of the fact')+'"><button id=rv>Reveal</button><button id=kn>I knew it</button><button id=nk>I did not</button><div id=res class=mut></div>';
+const sc=()=>$('#res').textContent='Score: '+S.f.k+' known of '+S.f.n+' tries.';sc();
+$('#rv').onclick=()=>{const g=$('#g').value.trim();$('#q').textContent=D.text;if(kw&&g)$('#res').textContent=(g.toLowerCase()===kw.toLowerCase()?'Correct: ':'Answer: ')+kw}
+$('#kn').onclick=()=>{S.f.k++;S.f.n++;save();sc()};$('#nk').onclick=()=>{S.f.n++;save();sc()}}
+else if(T==='PROJECT'){S.p=S.p||[];w.innerHTML=D.clauses.map((c,i)=>'<label><select data-i='+i+' style="width:110px"><option>todo</option><option>doing</option><option>done</option></select><span>'+esc(c)+'</span></label>').join('')+'<button id=ex>Copy status</button>';
+w.querySelectorAll('select').forEach(s=>{const i=+s.dataset.i;s.value=S.p[i]||'todo';s.onchange=()=>{S.p[i]=s.value;save()}});
+$('#ex').onclick=()=>copy(D.clauses.map((c,i)=>'['+(S.p[i]||'todo')+'] '+c).join('\n'))}
+else if(T==='IDEA'||T==='INTEREST'){S.i=S.i||{};const f=[['b','Who benefits'],['s','First small step'],['r','Biggest risk']];
+w.innerHTML=f.map(x=>'<p class=mut>'+x[1]+'</p><input type=text data-k='+x[0]+'>').join('')+'<button id=ex>Copy plan</button>';
+w.querySelectorAll('input').forEach(n=>{n.value=S.i[n.dataset.k]||'';n.oninput=()=>{S.i[n.dataset.k]=n.value;save()}});
+$('#ex').onclick=()=>copy('Idea: '+D.text+'\n'+f.map(x=>x[1]+': '+(S.i[x[0]]||'')).join('\n'))}
+else{S.t=S.t||{v:3,r:''};w.innerHTML='<input type=range min=1 max=5 id=v style="width:100%"><div class=mut id=vl></div><textarea id=r placeholder="Your own reason"></textarea><button id=ex>Copy my view</button>';
+const lab=['','Strongly disagree','Disagree','Neutral','Agree','Strongly agree'];$('#v').value=S.t.v;$('#r').value=S.t.r;const up=()=>$('#vl').textContent=lab[$('#v').value];up();
+$('#v').oninput=()=>{S.t.v=+$('#v').value;save();up()};$('#r').oninput=()=>{S.t.r=$('#r').value;save()};
+$('#ex').onclick=()=>copy('Thought: '+D.text+'\nMy view: '+lab[S.t.v]+'\nReason: '+S.t.r)}</script>
+</body></html>
