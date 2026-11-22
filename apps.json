@@ -3,7 +3,7 @@
  "repo": "https://github.com/klanarongz2009-sketch/memory-miniapps",
  "catalog": "https://klanarongz2009-sketch.github.io/memory-miniapps/",
  "skill": "https://klanarongz2009-sketch.github.io/memory-miniapps/SKILL.md",
- "generated": "2026-11-22T20:58:41+07:00",
+ "generated": "2026-11-22T21:48:05+07:00",
  "source_note": "Text is the public, privacy-filtered English form of each memory entry. No private data.",
  "memory_count": 216,
  "ais": [
@@ -3044,14 +3044,14 @@
    "n": 216,
    "ai": "sesame",
    "type": "RULE",
-   "title": "the user's repositories use the user's own license, not MIT or another...",
+   "title": "the user's repositories use the user's own license (the TER-AI License,...",
    "generalized": false,
    "retired": false,
    "created": "2026-11-22",
    "updated": "2026-11-22",
    "path": "apps/sesame/M216/",
    "url": "https://klanarongz2009-sketch.github.io/memory-miniapps/apps/sesame/M216/",
-   "text": "the user's repositories use the user's own license, not MIT or another standard license; do not propose or substitute MIT or other licenses on your own. RomanizerTh uses the AI Memory License 1.0 (AML 1.0, SPDX LicenseRef-AML-1.0), copied in full from the memory-miniapps LICENSE with no change to its terms, with only the GitHub handle in the copyright line. Already-released code and third-party licenses keep their own licenses."
+   "text": "the user's repositories use the user's own license (the TER-AI License, built from MIT and others), not MIT, AML or another license; do not propose or substitute other licenses. RomanizerTh uses the TER-AI License 1.0 (SPDX LicenseRef-TER-AI-1.0), sections 1-9 copied unchanged from ter-ai's LICENSE-TER-AI-1.0.md, copyright line = GitHub handle only. PR #1 was merged on 2026-11-22 (1715f8a). AML 1.0 is only for memory-miniapps."
   }
  ]
 }
