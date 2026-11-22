@@ -36,18 +36,43 @@ One memory entry = one small, self-contained interactive app. Read this whole fi
 ## 4. App rules
 
 - Each app is one self-contained HTML file with inline HTML, CSS and JavaScript; no external CDN, fonts, images, trackers or network requests. It must work offline once loaded.
-- Use Dark Mode, English UI, and no emojis unless explicitly requested.
+- Language, text style and design come from your own memory of your own user (section 4a), not from this repository's look and not from another person's preferences.
 - Make a small usable tool, not just a static text page. Store user-entered input only in browser `localStorage`.
 - Show the exact source memory text used by the app and include a link back to your catalog.
+- Put a short footer line in every app (for example `<ID> | built by <ai> | <YYYY-MM-DD>`); its wording follows your owner profile.
 - Include meta tags for `miniapp:id`, `miniapp:ai`, `miniapp:type`, `miniapp:title`, `miniapp:generalized`, `miniapp:created`, `miniapp:updated`, `miniapp:retired`, plus `miniapp:source` and `miniapp:source-id`. Source metadata must match the manifest.
 - Embed JSON memory metadata whose `id`, `ai` and `type` agree with the manifest.
 - One memory entry = one app. When an entry changes, update its app; when an entry is added, add an app; when an entry is deleted, mark the app retired and keep its URL.
 - Use only permanent GitHub Pages URLs; never temporary, signed or expiring links.
 
+## 4a. Language, text style and design per owner
+
+- Each person's apps take their **language**, **text style** (tone, wording, how messages are formatted) and **design** (colors, light or dark theme, layout, visual style) from **all** of that person's memory as held by their own AI.
+- Do not copy these from this repository, from Sesame's apps or from the maintainer's preferences. The maintainer's apps look the way they do (English UI, dark theme, no emojis, neutral and direct wording) because that is what Sesame's memory of the maintainer says.
+- When your memory says nothing about one of these, pick a neutral default (for example: the language your user writes to you in, the system light/dark setting via `prefers-color-scheme`, plain neutral wording) and state which fields are defaults.
+- Declare the result as `owner_profile` at the top level of your manifest, and follow it in every app:
+
+```json
+"owner_profile": {
+  "owner": "<github-account>",
+  "built_by": "<ai>",
+  "lang": "<BCP 47 code, used in <html lang>>",
+  "theme": "dark | light | system",
+  "emoji": false,
+  "text_style": "<one line from memory>",
+  "footer": "{id} | built by {ai} | {created}",
+  "derived_from": ["<memory IDs or a short description of the memory used>"],
+  "defaults": ["<fields the memory said nothing about>"]
+}
+```
+
+- Keep personal details out of `text_style` and `derived_from` (section 6).
+- The Code bot checks language, emojis, theme and footer only against your declared `owner_profile`, and flags them only when an app contradicts it.
+
 ## 5. Sources and manifests in this repository
 
 - Each source has its own namespace and stable ID prefix. Never convert one source's IDs into another's, and never associate entries across sources because their text looks similar.
-- Sesame (maintainer's AI): `apps.json`, IDs `M<n>`, files `apps/sesame/M<n>/index.html`.
+- Sesame (maintainer's AI): `apps.json`, IDs `M<n>`, files `apps/sesame/M<n>/index.html`; its `owner_profile` is derived from Sesame's memory of the maintainer.
 - Zapia (maintainer's AI): `zapia-apps.json`, namespace `zapia-own-memory`, IDs `ZM001` onward, files `apps/zapia/ZMxxx.html` (flat names keep paths stable in GitHub web uploads). Keep `path` and `url` in the manifest synchronized with real files.
 - A new source from one of the maintainer's AIs defines its own namespace, ID prefix and manifest before adding apps.
 - In a contribution for one source, never create, edit, rename, delete, copy or reclassify another source's files or manifest entries.
@@ -79,7 +104,7 @@ One memory entry = one small, self-contained interactive app. Read this whole fi
 
 <!-- layout:start -->
 - AIs with apps: sesame
-- Memory entries: 213; live apps per AI: sesame 213
+- Memory entries: 214; live apps per AI: sesame 214
 - Types used: FACT, IDEA, INTEREST, PREF, PROJECT, RULE, THOUGHT
 - App path: apps/<ai-name>/M<n>/index.html; catalog reads miniapp:* meta tags
 <!-- layout:end -->

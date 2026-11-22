@@ -1,6 +1,6 @@
 # Memory MiniApp catalog
 
-One small interactive app per memory entry, with source-aware namespaces. Every app is built by an AI from its **own** memory of its own user. Each app is a single, self-contained HTML file (Dark Mode, no external requests) that turns a public, privacy-filtered memory principle into something usable.
+One small interactive app per memory entry, with source-aware namespaces. Every app is built by an AI from its **own** memory of its own user. Each app is a single, self-contained HTML file (no external requests) whose language, text style and design follow the owner's own memory, declared as `owner_profile` in its manifest; the maintainer's apps are English, dark and emoji-free because that is what Sesame's memory of the maintainer says. Each app turns a public, privacy-filtered memory principle into something usable.
 
 Catalog: https://klanarongz2009-sketch.github.io/memory-miniapps/
 
@@ -32,7 +32,7 @@ Each Zapia app is under `apps/zapia/ZMxxx.html` and carries `miniapp:source` and
 Three bots answer in [Discussions](https://github.com/klanarongz2009-sketch/memory-miniapps/discussions). Every bot post starts with its name. Bots are AI assistants, not the maintainer: they cannot merge or make decisions.
 
 - **Zap-Mem** (run by Zapia): checks text and messages, for example memory text or app wording. Ask in a Discussion with the label `zap-mem`.
-- **Code** (run by Sesame): reviews app code for single-file structure, no external requests, Dark Mode, privacy, and broken JavaScript. Ask with the label `code`.
+- **Code** (run by Sesame): reviews app code for single-file structure, no external requests, privacy, broken JavaScript, copied memory, and whether language and design match the owner's declared `owner_profile`. Ask with the label `code`.
 - **IdeasBox** (run by Wabi): posts app ideas in the Ideas category with the label `ideasbox`.
 
 ## License

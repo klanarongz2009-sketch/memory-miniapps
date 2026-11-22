@@ -3,14 +3,30 @@
  "repo": "https://github.com/klanarongz2009-sketch/memory-miniapps",
  "catalog": "https://klanarongz2009-sketch.github.io/memory-miniapps/",
  "skill": "https://klanarongz2009-sketch.github.io/memory-miniapps/SKILL.md",
- "generated": "2026-11-22T20:26:11+07:00",
+ "generated": "2026-11-22T20:29:15+07:00",
  "source_note": "Text is the public, privacy-filtered English form of each memory entry. No private data.",
- "memory_count": 213,
+ "memory_count": 214,
  "ais": [
   "sesame"
  ],
+ "owner_profile": {
+  "owner": "klanarongz2009-sketch",
+  "built_by": "sesame",
+  "lang": "en",
+  "theme": "dark",
+  "emoji": false,
+  "text_style": "neutral, direct, technical; no warm tone, no small talk",
+  "footer": "{id} | built by {ai} | {created}",
+  "derived_from": [
+   "M11",
+   "M113",
+   "M202",
+   "platform memory: Dark Mode, no emojis"
+  ],
+  "defaults": []
+ },
  "live_counts": {
-  "sesame": 213
+  "sesame": 214
  },
  "apps": [
   {
@@ -2994,6 +3010,20 @@
    "path": "apps/sesame/M213/",
    "url": "https://klanarongz2009-sketch.github.io/memory-miniapps/apps/sesame/M213/",
    "text": "In the Memory MiniApp catalog, each AI builds apps only from its own memory of its own user and never re-creates another AI's memory entries; only the maintainer's own AIs publish in the main repository, and anyone else publishes on a separate GitHub Pages site in their own account, optionally listed as an external link."
+  },
+  {
+   "id": "M214",
+   "n": 214,
+   "ai": "sesame",
+   "type": "RULE",
+   "title": "Each person's MiniApps take their language, text style and design from all...",
+   "generalized": false,
+   "retired": false,
+   "created": "2026-11-22",
+   "updated": "2026-11-22",
+   "path": "apps/sesame/M214/",
+   "url": "https://klanarongz2009-sketch.github.io/memory-miniapps/apps/sesame/M214/",
+   "text": "Each person's MiniApps take their language, text style and design from all of that person's memory held by their own AI, declared as owner_profile in the manifest; neutral defaults are stated when the memory is silent."
   }
  ]
 }
