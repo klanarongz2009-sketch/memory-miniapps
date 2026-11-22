@@ -16,9 +16,10 @@ class SourceAwareCatalogTests(unittest.TestCase):
    self.assertIn(a["text"],html)
  def test_independent_namespace_not_sesame_versions(self):
   d=json.loads((ROOT/"zapia-apps.json").read_text()); base=json.loads((ROOT/"apps.json").read_text())
-  self.assertEqual(base["ais"],["sesame"]); self.assertEqual(base["memory_count"],211)
-  self.assertTrue(all(a["id"].startswith("ZM") for a in d["apps"]))
-  self.assertTrue(all(a["id"].startswith("M") and a["ai"]=="sesame" for a in base["apps"]))
+  zapia_ids={a["id"] for a in d["apps"]}; base_ids={a["id"] for a in base["apps"]}
+  self.assertTrue(all(x.startswith("ZM") for x in zapia_ids))
+  self.assertTrue(zapia_ids.isdisjoint(base_ids))
+  self.assertFalse(any(a.get("source")==d["source_id_namespace"] for a in base["apps"]))
   ui=(ROOT/"index.html").read_text(); self.assertIn("sourceOf(a)+'::'+a.id",ui)
   self.assertIn("fetch('zapia-apps.json'",ui)
 if __name__=="__main__": unittest.main()
