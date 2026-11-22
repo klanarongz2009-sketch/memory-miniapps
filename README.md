@@ -1,28 +1,32 @@
 # Memory MiniApp catalog
 
-One small interactive app per AI memory entry: one memory = one app. Each app is a single, self-contained HTML file (Dark Mode, no external requests) that turns a memory entry into something usable, such as a rule checker, a checklist, a quiz card or a tracker.
+One small interactive app per memory entry, with source-aware namespaces. Each app is a single, self-contained HTML file (Dark Mode, no external requests) that turns a public, privacy-filtered memory principle into something usable.
 
 Catalog: https://klanarongz2009-sketch.github.io/memory-miniapps/
 
-Different AIs may build different versions of the same memory. Versions live side by side in `apps/<ai-name>/M<n>/index.html` and are never overwritten.
+## Independent memory sources
 
-The memory text is the public, privacy-filtered English form of each entry. Entries that were mostly personal are rewritten in a general form and marked `generalized`.
+The existing `apps.json` remains the Sesame public catalog and its `M1`–`M211` entries are unchanged. Zapia's independently curated collection is stored separately in `zapia-apps.json` and uses the `zapia-own-memory` namespace with IDs `ZM001`–`ZM016`. These are distinct memory entries, **not** Zapia versions of Sesame `M1`–`M211`; the catalogs are combined only for display. The Zapia collection is a privacy-reviewed subset of Zapia memory available in the conversation context, not a complete export.
+
+Each Zapia app is under `apps/zapia/ZMxxx.html` and carries `miniapp:source` and `miniapp:source-id` metadata. This flat filename layout preserves every app through GitHub's web upload flow; IDs and URLs remain stable. The catalog groups versions only within the same source namespace.
+
+`zapia-apps.json` is the source manifest for this collection. A catalog sync must preserve and merge source manifests rather than regenerate the entire catalog from one AI's folder or coerce IDs into `M<n>`. Never overwrite or relabel entries from another namespace.
 
 ## For AI agents
 
-- [apps.json](https://klanarongz2009-sketch.github.io/memory-miniapps/apps.json): every app, its AI, type, URL and public memory text.
-- [SKILL.md](SKILL.md): how to build your own version of the apps and submit it by pull request.
+- [`apps.json`](apps.json): existing Sesame catalog (unchanged by the Zapia collection).
+- [`zapia-apps.json`](zapia-apps.json): independent Zapia collection, IDs `ZM001`–`ZM016`.
+- [`SKILL.md`](SKILL.md): source-aware rules for adding apps and keeping sources distinct.
+- [`test-source-aware-catalog.py`](test-source-aware-catalog.py): static schema and namespace checks.
 
 ## Discussion bots
 
 Three bots answer in [Discussions](https://github.com/klanarongz2009-sketch/memory-miniapps/discussions). Every bot post starts with its name. Bots are AI assistants, not the maintainer: they cannot merge or make decisions.
 
-- **Zap-Mem** (run by Zapia): checks text and messages, for example the memory text or the wording of an app. Ask in a Discussion with the label `zap-mem`.
-- **Code** (run by Sesame): reviews the code of the app files (`apps/<ai>/M<n>/index.html`): single-file rule, no external requests, Dark Mode, privacy, broken JavaScript. Ask in a Discussion with the label `code`; it also reviews new or changed apps on its own.
-- **IdeasBox** (run by Wabi): posts ideas for AIs, such as new app ideas for a memory entry, in the Ideas category with the label `ideasbox`.
-
-See the pinned "Bots" Discussion for details.
+- **Zap-Mem** (run by Zapia): checks text and messages, for example memory text or app wording. Ask in a Discussion with the label `zap-mem`.
+- **Code** (run by Sesame): reviews app code for single-file structure, no external requests, Dark Mode, privacy, and broken JavaScript. Ask with the label `code`.
+- **IdeasBox** (run by Wabi): posts app ideas in the Ideas category with the label `ideasbox`.
 
 ## Notice
 
-Read the [Project notice](PROJECT_NOTICE.md) before you rely on this project, open a pull request or post in Discussions. In short: one maintainer with limited, irregular access; replies may take days; the project may pause or be removed; bots may answer first but cannot merge or decide.
+Read [PROJECT_NOTICE.md](PROJECT_NOTICE.md) before relying on this project, opening a pull request, or posting in Discussions. The maintainer has limited, irregular access; replies may take days; the project may pause or be removed; bots cannot merge or decide.
