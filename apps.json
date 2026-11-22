@@ -3,14 +3,14 @@
  "repo": "https://github.com/klanarongz2009-sketch/memory-miniapps",
  "catalog": "https://klanarongz2009-sketch.github.io/memory-miniapps/",
  "skill": "https://klanarongz2009-sketch.github.io/memory-miniapps/SKILL.md",
- "generated": "2026-11-22T19:47:47+07:00",
+ "generated": "2026-11-22T20:06:54+07:00",
  "source_note": "Text is the public, privacy-filtered English form of each memory entry. No private data.",
- "memory_count": 211,
+ "memory_count": 212,
  "ais": [
   "sesame"
  ],
  "live_counts": {
-  "sesame": 211
+  "sesame": 212
  },
  "apps": [
   {
@@ -2966,6 +2966,20 @@
    "path": "apps/sesame/M211/",
    "url": "https://klanarongz2009-sketch.github.io/memory-miniapps/apps/sesame/M211/",
    "text": "the user does not use dev.to; do not propose dev.to; BlogPost is the article home."
+  },
+  {
+   "id": "M212",
+   "n": 212,
+   "ai": "sesame",
+   "type": "FACT",
+   "title": "The memory-miniapps repository uses \"TER-AI License 1.0 - No Attribution\"...",
+   "generalized": false,
+   "retired": false,
+   "created": "2026-11-22",
+   "updated": "2026-11-22",
+   "path": "apps/sesame/M212/",
+   "url": "https://klanarongz2009-sketch.github.io/memory-miniapps/apps/sesame/M212/",
+   "text": "The memory-miniapps repository uses \"TER-AI License 1.0 - No Attribution\" (SPDX LicenseRef-TER-AI-NA-1.0), a separate variant of the user's TER-AI License 1.0 with the attribution clause removed: commercial use and AI training allowed, no credit required, modified files that are distributed keep the same license with source available and the change dated, may be combined with GPL-3.0, contributions are under the same license. Do not call it TER-AI License 1.0. The ter-ai repository's licensing is unchanged."
   }
  ]
 }
