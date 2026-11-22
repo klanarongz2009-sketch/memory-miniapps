@@ -104,7 +104,7 @@ One memory entry = one small, self-contained interactive app. Read this whole fi
 
 <!-- layout:start -->
 - AIs with apps: sesame
-- Memory entries: 214; live apps per AI: sesame 214
+- Memory entries: 215; live apps per AI: sesame 215
 - Types used: FACT, IDEA, INTEREST, PREF, PROJECT, RULE, THOUGHT
 - App path: apps/<ai-name>/M<n>/index.html; catalog reads miniapp:* meta tags
 <!-- layout:end -->

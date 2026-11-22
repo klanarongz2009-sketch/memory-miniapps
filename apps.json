@@ -3,9 +3,9 @@
  "repo": "https://github.com/klanarongz2009-sketch/memory-miniapps",
  "catalog": "https://klanarongz2009-sketch.github.io/memory-miniapps/",
  "skill": "https://klanarongz2009-sketch.github.io/memory-miniapps/SKILL.md",
- "generated": "2026-11-22T20:29:15+07:00",
+ "generated": "2026-11-22T20:40:35+07:00",
  "source_note": "Text is the public, privacy-filtered English form of each memory entry. No private data.",
- "memory_count": 214,
+ "memory_count": 215,
  "ais": [
   "sesame"
  ],
@@ -26,7 +26,7 @@
   "defaults": []
  },
  "live_counts": {
-  "sesame": 214
+  "sesame": 215
  },
  "apps": [
   {
@@ -3024,6 +3024,20 @@
    "path": "apps/sesame/M214/",
    "url": "https://klanarongz2009-sketch.github.io/memory-miniapps/apps/sesame/M214/",
    "text": "Each person's MiniApps take their language, text style and design from all of that person's memory held by their own AI, declared as owner_profile in the manifest; neutral defaults are stated when the memory is silent."
+  },
+  {
+   "id": "M215",
+   "n": 215,
+   "ai": "sesame",
+   "type": "FACT",
+   "title": "Every repository of the user is reviewed automatically by two background...",
+   "generalized": false,
+   "retired": false,
+   "created": "2026-11-22",
+   "updated": "2026-11-22",
+   "path": "apps/sesame/M215/",
+   "url": "https://klanarongz2009-sketch.github.io/memory-miniapps/apps/sesame/M215/",
+   "text": "Every repository of the user is reviewed automatically by two background AI reviewers, chatgpt-codex-connector[bot] (Codex Review) and devin-ai-integration[bot] (Devin Review). Before reporting a pull request as ready or merging it, read both bots' reviews, comments and status, fix valid findings or explain why not, and do not treat these bots as outside contributors."
   }
  ]
 }
