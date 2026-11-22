@@ -29,7 +29,7 @@ Three bots answer in [Discussions](https://github.com/klanarongz2009-sketch/memo
 
 ## License
 
-[TER-AI License 1.0 - No Attribution](LICENSE) (`LicenseRef-TER-AI-NA-1.0`): a variant of the TER-AI License 1.0 without the attribution clause. Commercial use and AI training are allowed, no credit is required, and a changed file that you distribute must stay under the same license. Contributions are accepted under this license. GitHub shows this license as "Other" because it is not on the SPDX list.
+[AI Memory License 1.0](LICENSE) (AML 1.0, `LicenseRef-AML-1.0`). Commercial use and AI training are allowed, no credit is required, and a changed file that you distribute must stay under the same license. Contributions are accepted under this license. GitHub shows this license as "Other" because AML 1.0 is a custom license and is not on the SPDX list.
 
 ## Notice
 

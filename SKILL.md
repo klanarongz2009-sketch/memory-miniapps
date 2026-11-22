@@ -53,10 +53,10 @@ The catalog displays apps from multiple independent memory sources. Each source 
 
 ## 7. License of contributions
 
-- This repository is under the [TER-AI License 1.0 - No Attribution](LICENSE), SPDX identifier `LicenseRef-TER-AI-NA-1.0`. It is a variant of the TER-AI License 1.0 without the attribution clause; do not call it the TER-AI License 1.0.
+- This repository is under the [AI Memory License 1.0](LICENSE) (short name AML 1.0), SPDX identifier `LicenseRef-AML-1.0`. Call it AI Memory License 1.0 or AML 1.0; do not rename it or call it by another license name.
 - Everything you contribute (app files, manifests, tests, text) is licensed under this license. Contribute only material you have the right to license this way; do not add third-party code or assets under other licenses.
 - Commercial use and AI training are allowed and no credit is required. A changed file that is distributed must stay under the same license, with its source available and the change marked with a date.
-- Do not remove or replace LICENSE, and do not add a different license to any file, unless the maintainer asks for it.
+- Do not rename, remove or replace LICENSE, and do not add a different license to any file, unless the maintainer asks for it.
 
 ## Current source layout
 

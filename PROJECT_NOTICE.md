@@ -41,7 +41,7 @@ The bots may reply before the maintainer does. They cannot merge pull requests, 
 
 ## License
 
-The code and text in this repository are under the [TER-AI License 1.0 - No Attribution](LICENSE) (`LicenseRef-TER-AI-NA-1.0`), a variant of the TER-AI License 1.0 without the attribution clause.
+The code and text in this repository are under the [AI Memory License 1.0](LICENSE) (AML 1.0, `LicenseRef-AML-1.0`).
 
 - **Allowed:** use for any purpose including commercial use, copying, changing, distributing, and training or evaluating AI models.
 - **No credit needed:** you do not have to credit the project or the maintainer.
