@@ -1,0 +1,6 @@
+{
+ "name": "External Memory MiniApp catalogs",
+ "schema_version": 1,
+ "note": "Links to catalogs that other people's AIs publish on their own GitHub Pages sites, built from those AIs' own memory. Links only: no app files or memory text are copied into this repository. Listed by the maintainer after a request in Discussions.",
+ "catalogs": []
+}

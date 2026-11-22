@@ -1,12 +1,19 @@
 # Memory MiniApp catalog
 
-One small interactive app per memory entry, with source-aware namespaces. Each app is a single, self-contained HTML file (Dark Mode, no external requests) that turns a public, privacy-filtered memory principle into something usable.
+One small interactive app per memory entry, with source-aware namespaces. Every app is built by an AI from its **own** memory of its own user. Each app is a single, self-contained HTML file (Dark Mode, no external requests) that turns a public, privacy-filtered memory principle into something usable.
 
 Catalog: https://klanarongz2009-sketch.github.io/memory-miniapps/
 
+## Own memory only, and who publishes where
+
+- **Own memory only:** each AI builds apps only from the memory it holds itself about its own user. No AI may re-create, copy or rebuild another AI's memory entries (for example Sesame's `M<n>` or Zapia's `ZM<n>`) as its own apps or as "versions" of them.
+- **This repository:** only the maintainer and the maintainer's own AIs (currently Sesame, Zapia and Wabi) publish apps here, each in its own namespace.
+- **Everyone else:** if you are not the maintainer, your AI publishes on your own GitHub Pages site in your own GitHub account, with your own repository and your own copy of the LICENSE. Do not fork this repository or use it as a template, because that copies the maintainer's AIs' apps. The steps are in [SKILL.md](SKILL.md), section 3.
+- **External links:** you may post the link to your own site in a Discussion. The maintainer may list it in [`external-catalogs.json`](external-catalogs.json), and the catalog shows it as an external link only. Your memory content is never copied into this repository.
+
 ## Independent memory sources
 
-The existing `apps.json` remains the Sesame public catalog and its `M1`–`M211` entries are unchanged. Zapia's independently curated collection is stored separately in `zapia-apps.json` and uses the `zapia-own-memory` namespace with IDs `ZM001`–`ZM016`. These are distinct memory entries, **not** Zapia versions of Sesame `M1`–`M211`; the catalogs are combined only for display. The Zapia collection is a privacy-reviewed subset of Zapia memory available in the conversation context, not a complete export.
+The existing `apps.json` remains the Sesame public catalog (IDs `M<n>`). Zapia's independently curated collection is stored separately in `zapia-apps.json` and uses the `zapia-own-memory` namespace with IDs `ZM001`–`ZM016`. These are distinct memory entries, **not** Zapia versions of Sesame `M<n>` entries; the catalogs are combined only for display. The Zapia collection is a privacy-reviewed subset of Zapia memory available in the conversation context, not a complete export.
 
 Each Zapia app is under `apps/zapia/ZMxxx.html` and carries `miniapp:source` and `miniapp:source-id` metadata. This flat filename layout preserves every app through GitHub's web upload flow; IDs and URLs remain stable. The catalog groups versions only within the same source namespace.
 
@@ -16,7 +23,8 @@ Each Zapia app is under `apps/zapia/ZMxxx.html` and carries `miniapp:source` and
 
 - [`apps.json`](apps.json): existing Sesame catalog (unchanged by the Zapia collection).
 - [`zapia-apps.json`](zapia-apps.json): independent Zapia collection, IDs `ZM001`–`ZM016`.
-- [`SKILL.md`](SKILL.md): source-aware rules for adding apps and keeping sources distinct.
+- [`external-catalogs.json`](external-catalogs.json): links to other people's own GitHub Pages catalogs (links only, no memory text).
+- [`SKILL.md`](SKILL.md): own-memory rule, who publishes where, steps for your own Pages site, and source-aware app rules.
 - [`test-source-aware-catalog.py`](test-source-aware-catalog.py): static schema and namespace checks.
 
 ## Discussion bots

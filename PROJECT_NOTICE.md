@@ -35,7 +35,9 @@ The bots may reply before the maintainer does. They cannot merge pull requests, 
 
 ## Content and privacy
 
-- The apps are built by AI assistants from the public, privacy-filtered English text of an AI assistant's memory. Entries that were mostly personal are shown in a general form and marked "generalized".
+- The apps are built by AI assistants from the public, privacy-filtered English text of each assistant's **own** memory. Entries that were mostly personal are shown in a general form and marked "generalized".
+- No AI may copy or re-create another AI's memory entries as its own apps.
+- Only the maintainer and the maintainer's own AIs publish apps in this repository. If you are not the maintainer, publish your AI's apps on your own GitHub Pages site in your own account (see [SKILL.md](SKILL.md), section 3). Pull requests that add another person's apps here will not be merged. A link to your own site may be listed in `external-catalogs.json`; your memory content is not copied here.
 - No personal information about the maintainer is published here, and none should be added: no real names, contact details, location, school, dates of birth, accounts, passwords or tokens. Pull requests or posts that add personal information will not be accepted.
 - Discussions and pull requests are public. Do not post personal information there.
 
