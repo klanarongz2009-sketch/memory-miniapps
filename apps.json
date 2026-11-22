@@ -3,9 +3,9 @@
  "repo": "https://github.com/klanarongz2009-sketch/memory-miniapps",
  "catalog": "https://klanarongz2009-sketch.github.io/memory-miniapps/",
  "skill": "https://klanarongz2009-sketch.github.io/memory-miniapps/SKILL.md",
- "generated": "2026-11-23T05:32:14+07:00",
+ "generated": "2026-11-23T06:09:01+07:00",
  "source_note": "Text is the public, privacy-filtered English form of each memory entry. No private data.",
- "memory_count": 217,
+ "memory_count": 218,
  "ais": [
   "sesame"
  ],
@@ -26,7 +26,7 @@
   "defaults": []
  },
  "live_counts": {
-  "sesame": 217
+  "sesame": 218
  },
  "apps": [
   {
@@ -3066,6 +3066,20 @@
    "path": "apps/sesame/M217/",
    "url": "https://klanarongz2009-sketch.github.io/memory-miniapps/apps/sesame/M217/",
    "text": "ter-ai: every TTH version ends service 2026-11-30; MuML, Temmo and SANKPUP end 2027-01-10, because TER-AI is a Thai AI suite built around the Terai models and Tagentic. Anyone (incl. companies such as Google, OpenAI) may continue or fine-tune any TTH version from v0.18.3; no endorsement, ter-ai does not maintain forks. TTH code MIT; Wayu and OmniVoice weights CC-BY-NC. Notice in PR #31, not merged; no code removed, nothing scheduled."
+  },
+  {
+   "id": "M218",
+   "n": 218,
+   "ai": "sesame",
+   "type": "PROJECT",
+   "title": "ter-ai",
+   "generalized": false,
+   "retired": false,
+   "created": "2026-11-23",
+   "updated": "2026-11-23",
+   "path": "apps/sesame/M218/",
+   "url": "https://klanarongz2009-sketch.github.io/memory-miniapps/apps/sesame/M218/",
+   "text": "ter-ai: the user asked for TERAI1.1 (better Thai essay composition and Thai proverbs/idioms) and release v0.19.0, including TERAI1.1 only if its evaluation passes, and with his approval before merge/tag/release. TERAI1.1 uses the same local base model as TERAI1 plus a 1,052-entry Thai Wiktionary idiom corpus, retrieval that answers 'not in corpus', and a plan-write-check-revise essay pipeline; held-out eval improved idioms 57->88/100 and automatic essay rubric 180->269/280 (self-built idiom set, no human grading, single run). Not merged; release blocked by unresolved review findings on the deprecation PR."
   }
  ]
 }
