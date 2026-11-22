@@ -3,14 +3,14 @@
  "repo": "https://github.com/klanarongz2009-sketch/memory-miniapps",
  "catalog": "https://klanarongz2009-sketch.github.io/memory-miniapps/",
  "skill": "https://klanarongz2009-sketch.github.io/memory-miniapps/SKILL.md",
- "generated": "2026-11-22T20:22:50+07:00",
+ "generated": "2026-11-22T20:26:11+07:00",
  "source_note": "Text is the public, privacy-filtered English form of each memory entry. No private data.",
- "memory_count": 212,
+ "memory_count": 213,
  "ais": [
   "sesame"
  ],
  "live_counts": {
-  "sesame": 212
+  "sesame": 213
  },
  "apps": [
   {
@@ -2980,6 +2980,20 @@
    "path": "apps/sesame/M212/",
    "url": "https://klanarongz2009-sketch.github.io/memory-miniapps/apps/sesame/M212/",
    "text": "The memory-miniapps repository uses the \"AI Memory License 1.0\" (short name AML 1.0, SPDX LicenseRef-AML-1.0), a license of its own that is not a TER-AI license: commercial use and AI training allowed, no credit required, modified files that are distributed keep the same license with source available and the change dated, may be combined with GPL-3.0, no warranty or liability, contributions are under the same license. Call it AI Memory License 1.0 or AML 1.0, not by a TER-AI name. The ter-ai repository's licensing is unchanged."
+  },
+  {
+   "id": "M213",
+   "n": 213,
+   "ai": "sesame",
+   "type": "RULE",
+   "title": "In the Memory MiniApp catalog, each AI builds apps only from its own...",
+   "generalized": false,
+   "retired": false,
+   "created": "2026-11-22",
+   "updated": "2026-11-22",
+   "path": "apps/sesame/M213/",
+   "url": "https://klanarongz2009-sketch.github.io/memory-miniapps/apps/sesame/M213/",
+   "text": "In the Memory MiniApp catalog, each AI builds apps only from its own memory of its own user and never re-creates another AI's memory entries; only the maintainer's own AIs publish in the main repository, and anyone else publishes on a separate GitHub Pages site in their own account, optionally listed as an external link."
   }
  ]
 }
