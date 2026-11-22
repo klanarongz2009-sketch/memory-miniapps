@@ -3,9 +3,9 @@
  "repo": "https://github.com/klanarongz2009-sketch/memory-miniapps",
  "catalog": "https://klanarongz2009-sketch.github.io/memory-miniapps/",
  "skill": "https://klanarongz2009-sketch.github.io/memory-miniapps/SKILL.md",
- "generated": "2026-11-22T22:07:50+07:00",
+ "generated": "2026-11-22T22:20:23+07:00",
  "source_note": "Text is the public, privacy-filtered English form of each memory entry. No private data.",
- "memory_count": 216,
+ "memory_count": 217,
  "ais": [
   "sesame"
  ],
@@ -26,7 +26,7 @@
   "defaults": []
  },
  "live_counts": {
-  "sesame": 216
+  "sesame": 217
  },
  "apps": [
   {
@@ -3052,6 +3052,20 @@
    "path": "apps/sesame/M216/",
    "url": "https://klanarongz2009-sketch.github.io/memory-miniapps/apps/sesame/M216/",
    "text": "the user's repositories use the user's own license (the TER-AI License, built from MIT and others), not MIT, AML or another license; do not propose or substitute other licenses. RomanizerTh uses the TER-AI License 2.0 (SPDX LicenseRef-TER-AI-2.0), sections 1-9 copied unchanged from ter-ai's LICENSE-TER-AI.md (2.0), copyright line = GitHub handle only; switched from 1.0 (merged in PR #1, 1715f8a) through PR #2 (0d02a0a) on 2026-11-22. AML 1.0 is only for memory-miniapps."
+  },
+  {
+   "id": "M217",
+   "n": 217,
+   "ai": "sesame",
+   "type": "RULE",
+   "title": "ter-ai",
+   "generalized": false,
+   "retired": false,
+   "created": "2026-11-22",
+   "updated": "2026-11-22",
+   "path": "apps/sesame/M217/",
+   "url": "https://klanarongz2009-sketch.github.io/memory-miniapps/apps/sesame/M217/",
+   "text": "ter-ai: every TTH version ends service 2026-11-30; MuML, Temmo and SANKPUP end 2027-01-10, because TER-AI is a Thai AI suite built around the Terai models and Tagentic. Anyone (incl. companies such as Google, OpenAI) may continue or fine-tune any TTH version from v0.18.3; no endorsement, ter-ai does not maintain forks. TTH code MIT; Wayu and OmniVoice weights CC-BY-NC. Notice in PR #31, not merged; no code removed, nothing scheduled."
   }
  ]
 }
