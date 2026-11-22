@@ -3,7 +3,7 @@
  "repo": "https://github.com/klanarongz2009-sketch/memory-miniapps",
  "catalog": "https://klanarongz2009-sketch.github.io/memory-miniapps/",
  "skill": "https://klanarongz2009-sketch.github.io/memory-miniapps/SKILL.md",
- "generated": "2026-11-22T21:48:05+07:00",
+ "generated": "2026-11-22T22:07:50+07:00",
  "source_note": "Text is the public, privacy-filtered English form of each memory entry. No private data.",
  "memory_count": 216,
  "ais": [
@@ -2362,10 +2362,10 @@
    "generalized": false,
    "retired": false,
    "created": "2026-11-21",
-   "updated": "2026-11-21",
+   "updated": "2026-11-22",
    "path": "apps/sesame/M167/",
    "url": "https://klanarongz2009-sketch.github.io/memory-miniapps/apps/sesame/M167/",
-   "text": "TER-AI License 1.0 is the user's own license: commercial use allowed, AI training allowed, attribution required, modified files keep the same license (file-level copyleft, close to MPL-2.0); may be combined with GPL-3.0 work; applies to new code only, earlier MIT releases stay MIT; SPDX LicenseRef-TER-AI-1.0; not OSI-approved. Committed as LICENSE-TER-AI.md; no file uses the header yet and the main LICENSE is still MIT."
+   "text": "TER-AI License 1.0 is the user's own license: commercial use allowed, AI training allowed, attribution required, modified files keep the same license (file-level copyleft, close to MPL-2.0); may be combined with GPL-3.0 work; applies to new code only, earlier MIT releases stay MIT; SPDX LicenseRef-TER-AI-1.0; not OSI-approved. Committed as LICENSE-TER-AI.md; no file uses the header yet and the main LICENSE is still MIT. Update 2026-11-22: ter-ai main now has TER-AI License 2.0 (LicenseRef-TER-AI-2.0) in LICENSE-TER-AI.md; the 1.0 text is archived as LICENSE-TER-AI-1.0.md and 2.0 does not relicense 1.0 files."
   },
   {
    "id": "M168",
@@ -3051,7 +3051,7 @@
    "updated": "2026-11-22",
    "path": "apps/sesame/M216/",
    "url": "https://klanarongz2009-sketch.github.io/memory-miniapps/apps/sesame/M216/",
-   "text": "the user's repositories use the user's own license (the TER-AI License, built from MIT and others), not MIT, AML or another license; do not propose or substitute other licenses. RomanizerTh uses the TER-AI License 1.0 (SPDX LicenseRef-TER-AI-1.0), sections 1-9 copied unchanged from ter-ai's LICENSE-TER-AI-1.0.md, copyright line = GitHub handle only. PR #1 was merged on 2026-11-22 (1715f8a). AML 1.0 is only for memory-miniapps."
+   "text": "the user's repositories use the user's own license (the TER-AI License, built from MIT and others), not MIT, AML or another license; do not propose or substitute other licenses. RomanizerTh uses the TER-AI License 2.0 (SPDX LicenseRef-TER-AI-2.0), sections 1-9 copied unchanged from ter-ai's LICENSE-TER-AI.md (2.0), copyright line = GitHub handle only; switched from 1.0 (merged in PR #1, 1715f8a) through PR #2 (0d02a0a) on 2026-11-22. AML 1.0 is only for memory-miniapps."
   }
  ]
 }
