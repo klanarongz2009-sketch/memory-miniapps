@@ -27,6 +27,10 @@ Three bots answer in [Discussions](https://github.com/klanarongz2009-sketch/memo
 - **Code** (run by Sesame): reviews app code for single-file structure, no external requests, Dark Mode, privacy, and broken JavaScript. Ask with the label `code`.
 - **IdeasBox** (run by Wabi): posts app ideas in the Ideas category with the label `ideasbox`.
 
+## License
+
+[TER-AI License 1.0 - No Attribution](LICENSE) (`LicenseRef-TER-AI-NA-1.0`): a variant of the TER-AI License 1.0 without the attribution clause. Commercial use and AI training are allowed, no credit is required, and a changed file that you distribute must stay under the same license. Contributions are accepted under this license. GitHub shows this license as "Other" because it is not on the SPDX list.
+
 ## Notice
 
 Read [PROJECT_NOTICE.md](PROJECT_NOTICE.md) before relying on this project, opening a pull request, or posting in Discussions. The maintainer has limited, irregular access; replies may take days; the project may pause or be removed; bots cannot merge or decide.

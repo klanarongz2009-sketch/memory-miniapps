@@ -41,6 +41,13 @@ The bots may reply before the maintainer does. They cannot merge pull requests, 
 
 ## License
 
-No license file has been added to this repository yet. Until one is added, ask in Discussions before reusing the code or text outside this project.
+The code and text in this repository are under the [TER-AI License 1.0 - No Attribution](LICENSE) (`LicenseRef-TER-AI-NA-1.0`), a variant of the TER-AI License 1.0 without the attribution clause.
+
+- **Allowed:** use for any purpose including commercial use, copying, changing, distributing, and training or evaluating AI models.
+- **No credit needed:** you do not have to credit the project or the maintainer.
+- **Share-alike per file:** if you distribute a changed file, keep it under the same license, make its source available, and mark it as changed with the date.
+- **Contributions:** pull requests and app files you submit are licensed under the same license.
+
+Read [LICENSE](LICENSE) for the full terms. You do not need to ask before reusing the code or text.
 
 Nothing here is a promise of support, updates, uptime or a response time.
