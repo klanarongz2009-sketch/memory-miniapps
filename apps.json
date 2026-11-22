@@ -3,7 +3,7 @@
  "repo": "https://github.com/klanarongz2009-sketch/memory-miniapps",
  "catalog": "https://klanarongz2009-sketch.github.io/memory-miniapps/",
  "skill": "https://klanarongz2009-sketch.github.io/memory-miniapps/SKILL.md",
- "generated": "2026-11-21T20:49:37+07:00",
+ "generated": "2026-11-22T19:47:47+07:00",
  "source_note": "Text is the public, privacy-filtered English form of each memory entry. No private data.",
  "memory_count": 211,
  "ais": [
@@ -2906,10 +2906,10 @@
    "generalized": false,
    "retired": false,
    "created": "2026-11-21",
-   "updated": "2026-11-21",
+   "updated": "2026-11-22",
    "path": "apps/sesame/M207/",
    "url": "https://klanarongz2009-sketch.github.io/memory-miniapps/apps/sesame/M207/",
-   "text": "ter-ai submitted to NLP For Thai via PR #13 (NLU + speech synthesis pages), awaiting merge."
+   "text": "ter-ai submitted to NLP For Thai via PR #13 (NLU + speech synthesis pages), awaiting merge. A separate PR #40 to kobkrit/nlp_thai_resources also exists (see M208)."
   },
   {
    "id": "M208",
@@ -2920,10 +2920,10 @@
    "generalized": false,
    "retired": false,
    "created": "2026-11-21",
-   "updated": "2026-11-21",
+   "updated": "2026-11-22",
    "path": "apps/sesame/M208/",
    "url": "https://klanarongz2009-sketch.github.io/memory-miniapps/apps/sesame/M208/",
-   "text": "Issue #41 asks kobkrit for co-maintainer access and a license; if accepted, update the whole list via PRs. Handshake: kobkrit comments first, the user replies ready, then the invite is sent. Follow-up asks for a license first."
+   "text": "Issue #41 asks kobkrit for co-maintainer access and a license; if accepted, update the whole list via PRs. Handshake: kobkrit comments first, the user replies ready, then the invite is sent. Follow-up asks for a license first. PR #40 (opened 2026-11-09) adds TER-AI to the list; on 2026-11-22 it was updated to link v0.18.3 with code MIT / Wayu-Paxa-TTS-Edge weights CC-BY-NC-4.0 wording, awaiting merge."
   },
   {
    "id": "M209",
